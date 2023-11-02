@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Productos</title>
+</head>
+<body>
+    <h1>Lista de Productos</h1>
+    <ul>
+        {% for product in products %}
+            <li>{{ product.name }} - Precio: ${{ product.price }}</li>
+        {% endfor %}
+    </ul>
+    <p><a href="{{ path('homepage') }}">Volver a la página de inicio</a></p>
+</body>
+</html>

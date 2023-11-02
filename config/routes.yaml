@@ -1,0 +1,14 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+home:
+    path: /
+    controller: App\Controller\HomeController::index
+
+product_list:
+    path: /productos
+    controller: App\Controller\ProductController::listProducts    
+
