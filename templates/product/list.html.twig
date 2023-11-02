@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Lista de Productos</title>
-</head>
-<body>
+{# templates/product/list.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
     <h1>Lista de Productos</h1>
     <ul>
         {% for product in products %}
-            <li>{{ product.name }} - Precio: ${{ product.price }}</li>
+            <li>{{ product.getName() }} - ${{ product.getPrice() }}</li>
         {% endfor %}
     </ul>
-    <p><a href="{{ path('homepage') }}">Volver a la página de inicio</a></p>
-</body>
-</html>
+{% endblock %}

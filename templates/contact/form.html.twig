@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Contacto</title>
-</head>
-<body>
-    <h1>Contacto</h1>
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    {{ form_end(form) }}
-    <p><a href="{{ path('homepage') }}">Volver a la página de inicio</a></p>
-</body>
-</html>
+{# templates/contact/form.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Formulario de Contacto</h1>
+    {{ form_start(contactForm) }}
+    {{ form_row(contactForm.name) }}
+    {{ form_row(contactForm.email) }}
+    {{ form_row(contactForm.message) }}
+    {{ form_row(contactForm.submit) }}
+    {{ form_end(contactForm) }}
+{% endblock %}
